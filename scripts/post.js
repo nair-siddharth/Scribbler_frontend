@@ -1,4 +1,9 @@
+// Change page title to show author name
+var titlePost = document.getElementById('titlePost');
+titlePost.innerText = '@'+document.getElementById('authorName').innerText;
 
+
+// Post manipulation
 function allowEdit(){
     var hdr = document.getElementById('postHdr');
     hdr.setAttribute('contenteditable',"true");
@@ -27,6 +32,8 @@ function saveEdit(){
     editBtn.style.display = 'block';
 }
 
+
+//Likes updating
 var likeCount = 0;
 
 function likeUpdate(){
@@ -44,6 +51,8 @@ function likeUpdate(){
     }
 }
 
+
+// Comment manipulation
 function saveComment(){
     var comment = document.getElementById('comment');
     if(comment.value==''){
