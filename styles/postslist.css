@@ -1,44 +1,12 @@
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
+/*Override index.css body style in order to remove background*/
 body{
     background-color: #ffeedd;
+    background-image: none;
 }
 
-hr{
-    margin: 0%;
-    padding: 0%;
-}
-
+/*Change cursor when hovering on 'Scribbler' to identify that you can click to go back to index.html*/
 #headName{
-    font-family: 'Montez', cursive; 
-    font-size : 40px;
-    color: blue;
-    margin: 1%;
-    width: 80vh;
-}
-
-#subHeadName{
-    font-family: 'Ubuntu Mono',monospace; 
-    margin: 1%;
-}
-
-.authButtons{
-    width : 100px;
-    height: 45px;
-    color: whitesmoke;
-    margin: 2%;
-    border-radius: 5%;
-
-}
-
-#authDiv{
-    display: flex;
-    justify-content: flex-end;
-    width : 40vw;
+    cursor: pointer;
 }
 
 #all-posts{
@@ -58,9 +26,10 @@ hr{
     margin: 10px;
 }
 
+/*add shadow to box on focus*/
 .posts:hover,.posts:focus{
-    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.3);
-    /*transition: 0.05s;*/
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+    transition: 0.5s;
 }
 
 
@@ -71,7 +40,6 @@ hr{
 }
 
 .postOwner{
-
     font-size: 15px;
     font-weight: bold;
     display: flex;
@@ -100,155 +68,14 @@ hr{
    
     font-size: 15px;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis;/*show ellipsis if post takes up more than 3 lines*/
     display: -webkit-box;
     -webkit-line-clamp: 3; /* number of lines to show */
     -webkit-box-orient: vertical;
 }
 
-
-/*Modals below*/
-.modal {
-    display: none; /* Hidden by default */
-    position: absolute;
-    z-index: 1; /* Sit on top */
-    padding: 40px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: 0; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,.7); /* Black w/ opacity */
-    justify-content: center;
-}
-
-.modal-content {
-    display: flex;
-    width: 25vw;
-    height: fit-content;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 5%;
-}
-
-.modal-content-post {
-    background-color: white;
-    display: flex;
-    border-radius: 5px;
-    width: 90vw;
-    height: fit-content;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 1%;
-}
-
-
-
-.label-text {
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    padding: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-input {
-    background-color: rgb(231, 231, 231);
-    border: grey;
-    font-size: 12px;
-    padding: 2%;
-}
-
-textarea{
-    background-color: rgb(231, 231, 231);
-    border: grey;
-    font-size: 12px;
-    padding: 2%;
-}
-
-.signin-btn {
-    background-color: green;
-    padding: 10px;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    cursor: pointer;
-}
-
-
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-#closeHdr{
-    color: #aaaaaa;
-    float: left;
-    font-size: 28px;
-    font-weight: bold;
-    justify-content: space-between;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#goToSignUp{
-    color: blue;
-}
-
-#goToSignUp:hover{
-    cursor: pointer;
-}
-
-#signupHdr{
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-top: 2%;
-    margin-bottom: 0%;
-}
-
-#signinHdr{
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-top: 2%;
-    margin-bottom: 0%;
-}
-
-#createPostHdr{
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-top: 2%;
-    margin-bottom: 0%;
-}
-
-
-#signinFooter{
-    font-weight: bolder;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0%;
-    margin-bottom: 5%;
-    padding-left: 20%;
-    padding-right: 20%;
-}
-
+/*Modal for post delete window*/
 #modal-post-delete{
-
     margin-top : 25vh;
     background-color: whitesmoke;
     width: 25vw;
